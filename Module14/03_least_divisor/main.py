@@ -4,8 +4,11 @@ def smallest_divisor(n):
             print('Наименьший делитель, отличный от единицы:', divisor)
             break
 
+
 n = int(input('Введите натуральное число, большее единицы: '))
 if n <= 1:
     print('Ошибка ввода. Введите число, большее единицы')
 else:
     smallest_divisor(n)
+
+# зачтено
