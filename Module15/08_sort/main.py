@@ -6,3 +6,5 @@ for index in range(len(list1)):
             list1[index1], list1[index1 + 1] = list1[index1 + 1], list1[index1]
 
 print('Сортированный список', list1)
+
+# зачтено

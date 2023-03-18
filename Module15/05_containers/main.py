@@ -5,7 +5,7 @@ count = 1
 while container_count > 0:
     weight = int(input('Введите вес контейнера (не больше 200): '))
     if weight > 200:
-         print('Ошибка. Вес не может быть больше 200')
+        print('Ошибка. Вес не может быть больше 200')
     else:
         container_count -= 1
         container_list.append(weight)
@@ -18,3 +18,4 @@ for i in container_list:
 
 print('Номер, который получит новый контейнер:', count)
 
+# зачтено

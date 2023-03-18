@@ -11,3 +11,5 @@ for i in range(lenght):
 
 if x:
     print('Слово является палиндромом')
+
+# зачтено

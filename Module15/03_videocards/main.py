@@ -15,3 +15,5 @@ for i1 in old_list:
 
 print('Старый список видеокарт:', old_list)
 print('Новый список видеокарт:', new_list)
+
+# зачтено

@@ -18,3 +18,5 @@ for film1 in range(count_films):
 print('Ваш список любимых фильмов: ', end='')
 for i in like_films:
     print(i, end=' ')
+
+# зачтено
