@@ -1,7 +1,7 @@
 def change(sym1, K):
-    if sym1 == ' ' or sym1 == '.':
+    if sym1 == " " or sym1 == ".":
         return sym1
-    alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+    alphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
     count = alphabet.index(sym1)
     new_count = count + K
     if new_count <= 32:
@@ -9,11 +9,14 @@ def change(sym1, K):
     else:
         return alphabet[new_count - 33]
 
-text = input('Введите текст: ')
-K = int(input('Введите сдвиг: '))
-new_text = ''
+
+text = input("Введите текст: ")
+K = int(input("Введите сдвиг: "))
+new_text = ""
 
 for i in range(len(text)):
     new_text = new_text + change(text[i], K)
 
-print('Зашифрованное сообщение:', new_text)
+print("Зашифрованное сообщение:", new_text)
+
+# зачтено
