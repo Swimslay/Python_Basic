@@ -44,5 +44,16 @@ data = {
     ]
 }
 
+print('1.', data.values())
+print('1.', data.keys())
 
-# TODO здесь писать код
+data['ETH']['total_diff'] = 100 #2й пункт
+
+list1 = data['tokens'] #3й пункт
+dict1 = list1[0]
+dict1['fst_token_info']['name'] = 'doge'
+
+dict2 = list1[1] # 4й пункт
+data['ETH']['total_out'] = dict2.pop('total_out')
+
+dict2['sec_token_info']['total_price'] = dict2['sec_token_info'].pop('price') #5й пункт

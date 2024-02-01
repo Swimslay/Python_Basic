@@ -24,4 +24,19 @@ store = {
     ],
 }
 
-# TODO здесь писать код
+codes = dict()
+multipl = 1
+summ_multi = 0
+number = 12345
+for i2 in range(4):
+    multipl = 1
+    summ_multi = 0
+    for i1 in range(len(store[str(number)])):
+        first_total_price = store[str(number)][i1].values()
+        for i in first_total_price:
+            multipl *= int(i)
+        summ_multi += multipl
+        multipl = 1
+    codes[str(number)] = 'общая стоимость {0} рубля'.format(str(summ_multi))
+    number += 11111
+print(codes)
