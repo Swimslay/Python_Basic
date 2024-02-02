@@ -38,3 +38,10 @@ store = {
 #          и перемножаем их)
 #      - Печатаем шаблон "{} - {} шт, стоимость {} руб", в котором через .format() подставляем
 #      переменные i_name, total_quantity и total_cost
+for i_name in goods.keys():
+    total_quantity = 0
+    total_cost = 0
+    for j_good in store[goods[i_name]]:
+        total_quantity += j_good['quantity']
+        total_cost += j_good['price'] * j_good['quantity']
+    print('{0} - {1} шт, стоимость {2} руб'.format(i_name, total_quantity, total_cost))
