@@ -1,4 +1,4 @@
-text = input('Введите текст: ').lower()
+text = input("Введите текст: ").lower()
 hist = dict()
 
 for i_hist in text:
@@ -8,7 +8,7 @@ for i_hist in text:
         hist[i_hist] = 1
 
 for i_sym in hist.keys():
-    print(i_sym, ':', hist[i_sym])
+    print(i_sym, ":", hist[i_sym])
 
 count = max(hist.values())
 
@@ -17,5 +17,7 @@ for i in range(1, count + 1):
     for sym in hist.keys():
         if hist[sym] == i:
             reverse.append(sym)
-    print(i, ':', reverse)
+    print(i, ":", reverse)
     reverse = []
+
+# зачтено

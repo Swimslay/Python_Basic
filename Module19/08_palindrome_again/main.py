@@ -1,6 +1,8 @@
-text = input('Введите строку: ')
+text = input("Введите строку: ")
 palin = dict()
 count_odd = 0
+
+
 def odds(text, count_odd):
     count_odd = 0
     for i_palin in text:
@@ -15,6 +17,8 @@ def odds(text, count_odd):
 
 
 if odds(text, count_odd) > 1:
-    print('Нельзя сделать палиндромом')
+    print("Нельзя сделать палиндромом")
 else:
-    print('Можно сделать палиндромом')
+    print("Можно сделать палиндромом")
+
+# зачтено

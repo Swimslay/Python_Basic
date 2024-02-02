@@ -1,10 +1,6 @@
 data = {
     "address": "0x544444444444",
-    "ETH": {
-        "balance": 444,
-        "total_in": 444,
-        "total_out": 4
-    },
+    "ETH": {"balance": 444, "total_in": 444, "total_out": 4},
     "count_txs": 2,
     "tokens": [
         {
@@ -18,11 +14,11 @@ data = {
                 "last_updated": 1519022607901,
                 "issuances_count": 0,
                 "holders_count": 137528,
-                "price": False
+                "price": False,
             },
             "balance": 5000,
             "totalIn": 0,
-            "total_out": 0
+            "total_out": 0,
         },
         {
             "sec_token_info": {
@@ -35,25 +31,27 @@ data = {
                 "last_updated": 1520452201,
                 "issuances_count": 0,
                 "holders_count": 20707,
-                "price": False
+                "price": False,
             },
             "balance": 500,
             "totalIn": 0,
-            "total_out": 0
-        }
-    ]
+            "total_out": 0,
+        },
+    ],
 }
 
-print('1.', data.values())
-print('1.', data.keys())
+print("1.", data.values())
+print("1.", data.keys())
 
-data['ETH']['total_diff'] = 100 #2й пункт
+data["ETH"]["total_diff"] = 100  # 2й пункт
 
-list1 = data['tokens'] #3й пункт
+list1 = data["tokens"]  # 3й пункт
 dict1 = list1[0]
-dict1['fst_token_info']['name'] = 'doge'
+dict1["fst_token_info"]["name"] = "doge"
 
-dict2 = list1[1] # 4й пункт
-data['ETH']['total_out'] = dict2.pop('total_out')
+dict2 = list1[1]  # 4й пункт
+data["ETH"]["total_out"] = dict2.pop("total_out")
 
-dict2['sec_token_info']['total_price'] = dict2['sec_token_info'].pop('price') #5й пункт
+dict2["sec_token_info"]["total_price"] = dict2["sec_token_info"].pop("price")  # 5й пункт
+
+# зачтено

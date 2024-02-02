@@ -1,42 +1,40 @@
 goods = {
-    'Лампа': '12345',
-    'Стол': '23456',
-    'Диван': '34567',
-    'Стул': '45678',
+    "Лампа": "12345",
+    "Стол": "23456",
+    "Диван": "34567",
+    "Стул": "45678",
 }
 
 store = {
-    '12345': [
-        {'quantity': 27, 'price': 42},
+    "12345": [
+        {"quantity": 27, "price": 42},
     ],
-    '23456': [
-        {'quantity': 22, 'price': 510},
-        {'quantity': 32, 'price': 520},
+    "23456": [
+        {"quantity": 22, "price": 510},
+        {"quantity": 32, "price": 520},
     ],
-    '34567': [
-        {'quantity': 2, 'price': 1200},
-        {'quantity': 1, 'price': 1150},
+    "34567": [
+        {"quantity": 2, "price": 1200},
+        {"quantity": 1, "price": 1150},
     ],
-    '45678': [
-        {'quantity': 50, 'price': 100},
-        {'quantity': 12, 'price': 95},
-        {'quantity': 43, 'price': 97},
+    "45678": [
+        {"quantity": 50, "price": 100},
+        {"quantity": 12, "price": 95},
+        {"quantity": 43, "price": 97},
     ],
 }
 
-codes = dict()
-multipl = 1
-summ_multi = 0
-number = 12345
-for i2 in range(4):
-    multipl = 1
-    summ_multi = 0
-    for i1 in range(len(store[str(number)])):
-        first_total_price = store[str(number)][i1].values()
-        for i in first_total_price:
-            multipl *= int(i)
-        summ_multi += multipl
-        multipl = 1
-    codes[str(number)] = 'общая стоимость {0} рубля'.format(str(summ_multi))
-    number += 11111
-print(codes)
+# TODO:
+#  - Идём циклом for по ключам словаря, т.е. по goods.keys(). Переменная цикла - i_name. В цикле:
+#      - Объявляем переменную количества товаров total_quantity, равную 0
+#      - Объявляем переменную суммы товаров total_cost, равную 0
+#      - Идём циклом for по store[goods[i_name]] (Т.е. по получаем значение в goods, лежащее по ключу i_name,
+#      это будет айди. А затем получаем значение из store по ключу, которым является айди полученный ранее.
+#      Тем самым мы получаем нужный список с товарами). Переменная цикла - j_good. В цикле:
+#          - total_quantity увеличиваем на j_good["quantity"]
+#          (т.е. получаем у текущего объекта его кол-во по ключу "quantity")
+#          - total_cost увеличиваем на произведение j_good["price"] и j_good["quantity"]
+#          (т.е. получаем у текущего объекта его кол-во по ключу "quantity", также получаем цену текущего объекта
+#          и перемножаем их)
+#      - Печатаем шаблон "{} - {} шт, стоимость {} руб", в котором через .format() подставляем
+#      переменные i_name, total_quantity и total_cost

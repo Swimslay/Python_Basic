@@ -1,7 +1,7 @@
-times = int(input('Введите кол-во заказов: '))
+times = int(input("Введите кол-во заказов: "))
 names = dict()
 for _ in range(times):
-    order = input('Введите заказ: ')
+    order = input("Введите заказ: ")
     name, pizza, pizzas_count = order.rsplit(maxsplit=3)
     pizzas_count = int(pizzas_count)
     if name not in names:
@@ -12,6 +12,8 @@ for _ in range(times):
         else:
             names[name][pizza] += pizzas_count
 for name, order in sorted(names.items()):
-    print(f'{name}:')
+    print(f"{name}:")
     for pizza, pizzas_count in sorted(order.items()):
-        print('    ', pizza, pizzas_count)
+        print("    ", pizza, pizzas_count)
+
+# зачтено
