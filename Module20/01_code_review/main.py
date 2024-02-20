@@ -22,23 +22,17 @@ students = {
 
 def f(dict):
     lst = []
-    string = ''
     for i in dict:
         lst += (dict[i]['interests'])
-        string += dict[i]['surname']
-    cnt = 0
-    for s in string:
-        cnt += 1
+    string1 = [dict[i]['surname'] for i in dict]
+    string = ''.join(string1)
+    cnt = len(string)
     return lst, cnt
 
-
 pairs = []
-for i in students:
-    pairs += (i, students[i]['age'])
+for i1 in students:
+    pairs.append((i1, students[i1]['age']))
 
-
-my_lst = f(students)[0]
-l = f(students)[1]
-print(my_lst, l)
-
-# TODO исправить код
+print('Полный список интересов всех студентов:', f(students)[0])
+print('Общая длина всех фамилий студентов:', f(students)[1])
+print('Список пар "ID студента — возраст":', pairs)
