@@ -5,7 +5,7 @@ def summa(n):
         x = n % 10
         n //= 10
         count += x
-    print('Сумма чисел:', count)
+    print("Сумма чисел:", count)
     return count
 
 
@@ -14,15 +14,15 @@ def number_count(n):
     while n > 0:
         n //= 10
         count1 += 1
-    print('Количество цифр в числе:', count1)
+    print("Количество цифр в числе:", count1)
     return count1
 
 
-n = int(input('Введите положительное число: '))
+n = int(input("Введите положительное число: "))
 if n <= 0:
-    print('Ошибка ввода. Введите положительное число')
+    print("Ошибка ввода. Введите положительное число")
 else:
     difference = summa(n) - number_count(n)
-    print('Разность суммы и количества цифр:', difference)
+    print("Разность суммы и количества цифр:", difference)
 
 # зачтено

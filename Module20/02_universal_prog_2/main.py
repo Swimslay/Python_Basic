@@ -8,8 +8,13 @@ def is_prime(text):
         if count <= 1:
             dividers.append(i)
     return dividers
+
+
 def simpl(text):
     simple_list = [text[i1] for i1 in is_prime(text) if i1 < len(text)]
     return simple_list
 
-print(simpl('О Дивный Новый мир!'))
+
+print(simpl(range(11)))
+
+# зачтено

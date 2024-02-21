@@ -8,4 +8,4 @@ one_class.extend(second_class)
 
 one_class = sorted(one_class)
 
-print('Отсортированный список учеников:', one_class)
+print("Отсортированный список учеников:", one_class)
