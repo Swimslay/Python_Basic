@@ -9,4 +9,7 @@ def adv_sum(*args):
 
     return summ
 
-print(adv_sum(1, 2, 3, 4, 5))
+
+print(adv_sum(1, [2, [3, 4]]))
+
+# зачтено

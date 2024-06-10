@@ -5,5 +5,8 @@ def numbers(n):
     print(n)
     return cur_num
 
-num = int(input('Введите число: '))
+
+num = int(input("Введите число: "))
 numbers(num)
+
+# зачтено

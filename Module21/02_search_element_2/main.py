@@ -1,15 +1,14 @@
 site = {
-	'html': {
-		'head': {
-			'title': 'Мой сайт'
-		},
-		'body': {
-			'h2': 'Здесь будет мой заголовок',
-			'div': 'Тут, наверное, какой-то блок',
-			'p': 'А вот здесь новый абзац'
-		}
-	}
+    "html": {
+        "head": {"title": "Мой сайт"},
+        "body": {
+            "h2": "Здесь будет мой заголовок",
+            "div": "Тут, наверное, какой-то блок",
+            "p": "А вот здесь новый абзац",
+        },
+    }
 }
+
 
 def finder(struct, key, deep):
     if key in struct:
@@ -27,15 +26,18 @@ def finder(struct, key, deep):
 
     return result
 
-user_key = input('Введите искомый ключ: ')
-deep_answer = input('Хотите ввести максимальную глубину? Y/N: ').upper()
-if deep_answer == 'Y':
-    deep = int(input('Введите максимальную глубину: '))
-elif deep_answer == 'N':
+
+user_key = input("Введите искомый ключ: ")
+deep_answer = input("Хотите ввести максимальную глубину? Y/N: ").upper()
+if deep_answer == "Y":
+    deep = int(input("Введите максимальную глубину: "))
+elif deep_answer == "N":
     deep = 999999999999999999999
 else:
-    print('Ошибка ввода.')
+    print("Ошибка ввода.")
     exit()
 
 value = finder(site, user_key, deep)
-print('Значение ключа:', value)
+print("Значение ключа:", value)
+
+# зачтено

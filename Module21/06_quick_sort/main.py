@@ -12,6 +12,7 @@ def help_fast_sort(list_):
             high_list.append(index)
     return low_list, same_list, high_list
 
+
 def fast_sort(list1):
     if len(list1) <= 1:
         return list1
@@ -22,4 +23,7 @@ def fast_sort(list1):
 
     return sorted_low + same_list + sorted_high
 
+
 print(fast_sort([5, 8, 9, 4, 2, 9, 1, 8]))
+
+# зачтено
